@@ -8,6 +8,9 @@ runtime and prevent unknown/bad containers from being executed.
 Check out the project, edit the `verify.prometheus` file and fill in whatever
 alerting/monitoring functionality you want.
 
+Build the container image and change the daemonset to match the image name
+`docker-compose build`
+
 Make sure /var/run/docker.sock is accessible read-only.
 
 Deploy the daemonset to your Kubernetes cluster:
