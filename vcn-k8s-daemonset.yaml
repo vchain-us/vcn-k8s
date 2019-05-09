@@ -1,0 +1,53 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: codenotary-vcnverify-exporter
+  namespace: default
+  labels:
+    app: codenotary-vcnverify-exporter
+    release: 0.4.1
+    tier: monitor
+spec:
+  selector:
+    matchLabels:
+      app: codenotary-vcnverify-exporter
+      release: 0.4.1
+  template:
+    metadata:
+      labels:
+        app: codenotary-vcnverify-exporter
+        release: 0.4.1
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/'
+        prometheus.io/port: '9581'
+    spec:
+        containers:
+          # securityContext:
+          # privileged: true
+        - image: zerotrust/vcn:latest
+          name: codenotary-vcnverify-exporter
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 9581
+            hostPort: 9581
+            name: metrics
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/run/docker.sock
+            name: docker
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        hostNetwork: true
+        hostPID: true
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - hostPath:
+            path: /var/run/docker.sock
+            type: ""
+          name: docker
