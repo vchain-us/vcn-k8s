@@ -3,7 +3,7 @@ services:
   vcn:
     build:
       context: "."
-      dockerfile: "Dockerfile.prometheus"
+      dockerfile: "Dockerfile"
     ports:
       - "9581:9581"
     restart: "always"
