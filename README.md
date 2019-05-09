@@ -10,9 +10,10 @@ alerting/monitoring functionality you want.
 
 Make sure /var/run/docker.sock is accessible read-only.
 
-Run this on your server:
+Deploy the daemonset to your Kubernetes cluster:
 
-    docker-compose build && docker-compose up -d
+`kubectl apply -f vcn-k8s-daemonset.yaml`
+
 
 ## Design
 This tool is designed as a sidecar for your existing Kubernetes environment. All
