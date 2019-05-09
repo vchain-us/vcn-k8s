@@ -1,4 +1,4 @@
-FROM codenotary/vcn:unstable as vcn
+FROM codenotary/vcn as vcn
 FROM pierrezemb/gostatic:latest as gostatic
 FROM docker:latest
 ADD verify.prometheus /verify
