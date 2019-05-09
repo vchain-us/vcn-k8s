@@ -4,6 +4,8 @@ This project provides a tool for _CONTINUOUS VERIFICATION_ (CV) via CodeNotary.
 The idea behind CV is to continuously monitor your application environment at
 runtime and prevent unknown/bad containers from being executed.
 
+[Infographic vcn for Kubernetes](https://infograph.venngage.com/view/841e11e7-18e0-416e-ad11-1ea5366dcc86)
+
 ## Usage
 Check out the project, edit the `verify.prometheus` file and fill in whatever
 alerting/monitoring functionality you want.
