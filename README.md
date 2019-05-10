@@ -1,6 +1,6 @@
 # VCN Watchdog for Kubernetes
 This project provides a tool for _CONTINUOUS VERIFICATION_ (CV) via CodeNotary.
-The CodeNotary vcn project can be found here: (https://github.com/vchain-us/vcn)
+The CodeNotary vcn project can be found here: https://github.com/vchain-us/vcn
 
 The idea behind CV is to continuously monitor your application environment at
 runtime and prevent unknown/bad containers from being executed.
