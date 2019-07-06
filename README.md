@@ -5,7 +5,8 @@ The CodeNotary vcn project can be found here: https://github.com/vchain-us/vcn
 The idea behind CV is to continuously monitor your application environment at
 runtime and prevent unknown/bad containers from being executed.
 
-[Infographic vcn for Kubernetes](https://infograph.venngage.com/ps/ex4ECrROPCQ/codenotary-for-kubernetes)
+![alt text](https://github.com/vchain-us/vcn-k8s/blob/master/vcn-k8s.png "VCN K8s Daemonset")
+
 
 ## Usage
 Check out the project, edit the `verify.prometheus` file and fill in whatever
